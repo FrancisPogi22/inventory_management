@@ -6,14 +6,14 @@
 </head>
 
 <body>
-    <div class="applicant-container">
+    <div class="customer-container">
         <div class="left-content">
             <img src="{{ asset('assets/img/applicant-img.jpg') }}" alt="Picture">
         </div>
-        <div class="login-applicant-form">
+        <div class="login-customer-form">
             <form action="{{ route('login') }}" method="POST">
                 @csrf
-                <h1>Login Applicant Form</h1>
+                <h1>Login Customer Form</h1>
                 <div class="field-container">
                     <label class="form-label">Email address</label>
                     <input type="email" name="email" class="form-control"
@@ -25,9 +25,9 @@
                     <input type="password" name="password" class="form-control" placeholder="Enter Password" required>
                 </div>
                 <div class="form-bottom">
-                    <a href="{{ route('register.applicant') }}">Don't have account? Register here</a>
+                    <a href="{{ route('register.customer') }}">Don't have account? Register here</a>
                 </div>
-                <div class="applicant-button">
+                <div class="customer-button">
                     <a href="{{ route('home') }}" class="btn-danger">Back</a>
                     <button type="submit" class="btn-success">Login</button>
                 </div>

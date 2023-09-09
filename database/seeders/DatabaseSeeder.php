@@ -24,22 +24,22 @@ class DatabaseSeeder extends Seeder
 
         User::create([
             "type" => "Member",
-            "fullname" => "Arvin Faustino",
+            "fullname" => "Jochelle Mae Pastor",
             "age" => 22,
             "address" => "Pamantasan ng Cabuyao",
-            "email" => "a@gmail.com",
+            "email" => "j@gmail.com",
             "contact" => "12345678910",
-            "password" => Hash::make("a")
+            "password" => Hash::make("j")
         ]);
 
         User::create([
             "type" => "Customer",
-            "fullname" => "Arvin Faustino",
+            "fullname" => "Elisha Batayon",
             "age" => 22,
             "address" => "Pamantasan ng Cabuyao",
-            "email" => "a@gmail.com",
+            "email" => "e@gmail.com",
             "contact" => "12345678910",
-            "password" => Hash::make("a")
+            "password" => Hash::make("e")
         ]);
     }
 }

@@ -6,15 +6,15 @@
 </head>
 
 <body>
-    <div class="applicant-container">
+    <div class="member-container">
         <div class="left-content">
             <img src="{{ asset('assets/img/applicant-img.jpg') }}" alt="Picture">
         </div>
-        <div class="register-applicant-form">
+        <div class="register-member-form">
             <form action="{{ route('registerUser') }}" method="GET">
                 @csrf
-                <h1>Register New Applicant</h1>
-                <input type="text" name="type" value="Applicant" hidden>
+                <h1>Register New Member</h1>
+                <input type="text" name="type" value="Member" hidden>
                 <div class="field-container">
                     <label class="form-label">Full Name</label>
                     <input type="text" name="fullname" class="form-control"
@@ -48,9 +48,9 @@
                     <input type="password" name="password" class="form-control" placeholder="Enter Password" required>
                 </div>
                 <div class="form-bottom">
-                    <a href="{{ route('login.applicant') }}">Already have account? Login here</a>
+                    <a href="{{ route('login.member') }}">Already have account? Login here</a>
                 </div>
-                <div class="applicant-button">
+                <div class="member-button">
                     <a href="{{ route('home') }}" class="btn-danger">Back</a>
                     <button type="submit" class="btn-success" onclick="return confirm('Are you sure to register this information?')">Register</button>
                 </div>

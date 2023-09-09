@@ -10,7 +10,7 @@
         <section class="login-section">
             <h1>Inventory Management System</h1>
             <div class="login-category">
-                <a href="" class="login-widget">
+                <a href="{{ route('login.customer') }}" class="login-widget">
                     <img src="{{ asset('assets/img/new-user.png') }}" alt="Customer">
                     <p>CUSTOMER</p>
                 </a>
@@ -18,7 +18,7 @@
                     <img src="{{ asset('assets/img/new-user.png') }}" alt="Applicant">
                     <p>APPLICANT</p>
                 </a>
-                <a href="" class="login-widget">
+                <a href="{{ route('login.member') }}" class="login-widget">
                     <img src="{{ asset('assets/img/new-user.png') }}" alt="Member">
                     <p>MEMBER</p>
                 </a>

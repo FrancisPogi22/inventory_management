@@ -43,6 +43,7 @@
     border: none;
     border-radius: 6px;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .btn-danger:hover {
@@ -106,57 +107,83 @@
     font-weight: 800;
 }
 
-.applicant-container {
+.applicant-container,
+.customer-container,
+.member-container {
     display: flex;
 }
 
-.applicant-container .left-content img {
+.applicant-container .left-content img,
+.customer-container .left-content img,
+.member-container .left-content img{
     width: 600px;
     height: 100vh;
     object-fit: cover;
 }
 
-.applicant-container form{
+.applicant-container form,
+.customer-container form,
+.member-container form{
     width: 500px;
 }
 
 .applicant-container .register-applicant-form,
-.applicant-container .login-applicant-form {
+.applicant-container .login-applicant-form,
+.customer-container .register-customer-form,
+.customer-container .login-customer-form,
+.member-container .register-member-form,
+.member-container .login-member-form{
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1;
 }
 
-.applicant-container .form-label {
+.applicant-container .form-label,
+.customer-container .form-label,
+.member-container .form-label {
     margin: 0;
 }
 
-.applicant-container h1 {
+.applicant-container h1,
+.customer-container h1,
+.member-container h1{
     font-weight: 800;
     margin-bottom: 50px;
 }
 
-.applicant-container .field-container {
+.applicant-container .field-container,
+.customer-container .field-container,
+.member-container .field-container {
     margin-bottom: 16px;
 }
 
-.applicant-container label {
+.applicant-container label,
+.customer-container label,
+.member-container label{
     font-size: 18px;
     padding: 5px 5px;
 }
 
 .applicant-container input,
-.applicant-container select {
+.applicant-container select,
+.customer-container input,
+.customer-container select,
+.member-container input,
+.member-container select  {
     padding: 10px;
 }
 
-.applicant-container .form-bottom a {
+.applicant-container .form-bottom a,
+.customer-container .form-bottom a,
+.member-container .form-bottom a{
     font-size: 14px;
     font-style: italic;
 }
 
-.applicant-container .applicant-button {
+.applicant-container .applicant-button,
+.customer-container .customer-button,
+.member-container .member-button{
     display: flex;
     justify-content: space-between;
 }
