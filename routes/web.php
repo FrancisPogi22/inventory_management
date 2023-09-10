@@ -21,15 +21,15 @@ Route::controller(AuthenticationController::class)->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::name('applicant.')->controller(ApplicantController::class)->group(function () {
+    Route::middleware('check.applicant')->name('applicant.')->controller(ApplicantController::class)->group(function () {
         Route::get('/applicant/dashboard', 'applicantDashboard')->name('dashboard');
     });
 
-    Route::name('customer.')->controller(CustomerController::class)->group(function () {
+    Route::middleware('check.customer')->name('customer.')->controller(CustomerController::class)->group(function () {
         Route::get('/customer/dashboard', 'customerDashboard')->name('dashboard');
     });
 
-    Route::name('member.')->controller(MemberController::class)->group(function () {
+    Route::middleware('check.member')->name('member.')->controller(MemberController::class)->group(function () {
         Route::get('/member/dashboard', 'memberDashboard')->name('dashboard');
     });
 });

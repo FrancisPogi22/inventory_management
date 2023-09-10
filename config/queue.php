@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     'default' => env('QUEUE_CONNECTION', 'sync'),
 
     'connections' => [
@@ -59,5 +58,4 @@ return [
         'database' => env('DB_CONNECTION', 'mysql'),
         'table' => 'failed_jobs',
     ],
-
 ];

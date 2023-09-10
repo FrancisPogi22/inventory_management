@@ -6,6 +6,12 @@
     --color-text: #ffffff;
     --color-green: #22c55e;
     --color-red: #ef4444;
+    --color-widget: #334155;
+
+    --color-nav-hover: #94a3b8;
+
+    --color-green-hover: #16a34a;
+    --color-red-hover: #dc2626;
 }
 
 * {
@@ -32,7 +38,7 @@
 }
 
 .btn-success:hover {
-    background-color: #16a34a;
+    background-color: var(--color-green-hover);
     transform: scale(1.05);
 }
 
@@ -47,7 +53,7 @@
 }
 
 .btn-danger:hover {
-    background-color: #dc2626;
+    background-color: var(--color-red-hover);
     transform: scale(1.05);
 }
 
@@ -79,7 +85,7 @@
 }
 
 .wrapper .login-section .login-category .login-widget {
-    background: #334155;
+    background: var(--color-widget);
     width: 400px;
     display: flex;
     justify-content: center;
@@ -94,7 +100,6 @@
     transform: scale(1.1);
 }
 
-
 .wrapper .login-section .login-category .login-widget img {
     margin: 0 auto;
     max-width: 100%;
@@ -107,83 +112,52 @@
     font-weight: 800;
 }
 
-.applicant-container,
-.customer-container,
-.member-container {
+.authentication-container {
     display: flex;
 }
 
-.applicant-container .left-content img,
-.customer-container .left-content img,
-.member-container .left-content img{
+.authentication-container .side-image-content img {
     width: 600px;
     height: 100vh;
     object-fit: cover;
 }
 
-.applicant-container form,
-.customer-container form,
-.member-container form{
-    width: 500px;
-}
-
-.applicant-container .register-applicant-form,
-.applicant-container .login-applicant-form,
-.customer-container .register-customer-form,
-.customer-container .login-customer-form,
-.member-container .register-member-form,
-.member-container .login-member-form{
+.authentication-container .authentication-form-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1;
 }
 
-.applicant-container .form-label,
-.customer-container .form-label,
-.member-container .form-label {
+.authentication-container .authentication-form-container form {
+    width: 500px;
+}
+
+.authentication-container .authentication-form-container .field-container .form-label {
     margin: 0;
-}
-
-.applicant-container h1,
-.customer-container h1,
-.member-container h1{
-    font-weight: 800;
-    margin-bottom: 50px;
-}
-
-.applicant-container .field-container,
-.customer-container .field-container,
-.member-container .field-container {
-    margin-bottom: 16px;
-}
-
-.applicant-container label,
-.customer-container label,
-.member-container label{
     font-size: 18px;
     padding: 5px 5px;
 }
 
-.applicant-container input,
-.applicant-container select,
-.customer-container input,
-.customer-container select,
-.member-container input,
-.member-container select  {
+.authentication-container .authentication-form-container form h1 {
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+.authentication-container .authentication-form-container form .field-container {
+    margin-bottom: 16px;
+}
+
+.authentication-container .authentication-form-container form .field-container input {
     padding: 10px;
 }
 
-.applicant-container .form-bottom a,
-.customer-container .form-bottom a,
-.member-container .form-bottom a{
+.authentication-container .authentication-form-container form .form-link a {
     font-size: 14px;
     font-style: italic;
 }
 
-.applicant-container .applicant-button,
-.customer-container .customer-button,
-.member-container .member-button{
+.authentication-container .authentication-form-container form .authentication-button-container {
     display: flex;
     justify-content: space-between;
 }
@@ -258,51 +232,51 @@
     height: 70px;
 }
 
-.wrapper .main-section .sidebar .sidebar-content-container {
+.wrapper .main-section .sidebar .sidebar-container {
     position: relative;
     height: calc(100vh - 64px);
     overflow: auto;
 }
 
-.wrapper .main-section .sidebar .sidebar-content-container::-webkit-scrollbar {
+.wrapper .main-section .sidebar .sidebar-container::-webkit-scrollbar {
     display: none;
 }
 
-.wrapper .main-section .sidebar .sidebar-content-container .sidebar-content {
+.wrapper .main-section .sidebar .sidebar-container .sidebar-content {
     text-align: center;
 }
 
-.wrapper .main-section .sidebar .sidebar-content-container .nav-item {
+.wrapper .main-section .sidebar .sidebar-container .nav-item {
     position: relative;
     width: 100%;
     line-height: 50px;
     cursor: pointer;
 }
 
-.wrapper .main-section .sidebar .sidebar-content-container .nav-item:hover {
-    background: #94a3b8;
+.wrapper .main-section .sidebar .sidebar-container .nav-item:hover {
+    background: var(--color-nav-hover);
 }
 
-.wrapper .main-section .sidebar .sidebar-content-container .nav-item a {
+.wrapper .main-section .sidebar .sidebar-container .nav-item a {
     display: flex;
     align-items: center;
     white-space: nowrap;
     color: var(--color-text);
 }
 
-.wrapper .main-section .sidebar .sidebar-content-container .nav-item a i {
+.wrapper .main-section .sidebar .sidebar-container .nav-item a i {
     height: 50px;
     min-width: 80px;
     border-radius: 12px;
     line-height: 50px;
 }
 
-.wrapper .main-section .sidebar .sidebar-content-container .nav-item a span {
+.wrapper .main-section .sidebar .sidebar-container .nav-item a span {
     opacity: 0;
     text-align: start;
     overflow: hidden;
 }
 
-.wrapper .main-section .sidebar:hover .sidebar-content-container .sidebar-content .nav-item a span {
+.wrapper .main-section .sidebar:hover .sidebar-container .sidebar-content .nav-item a span {
     opacity: 1;
 }

@@ -6,7 +6,6 @@ use Monolog\Handler\SyslogUdpHandler;
 use Monolog\Processor\PsrLogMessageProcessor;
 
 return [
-
     'default' => env('LOG_CHANNEL', 'stack'),
 
     'deprecations' => [
@@ -90,5 +89,4 @@ return [
             'path' => storage_path('logs/laravel.log'),
         ],
     ],
-
 ];

@@ -6,34 +6,34 @@
 </head>
 
 <body>
-    <div class="applicant-container">
-        <div class="left-content">
-            <img src="{{ asset('assets/img/applicant-img.jpg') }}" alt="Picture">
-        </div>
-        <div class="login-applicant-form">
+    <main class="authentication-container">
+        <section class="side-image-content">
+            <img src="{{ asset('assets/img/side-image.jpg') }}" alt="Picture">
+        </section>
+        <section class="authentication-form-container">
             <form action="{{ route('login') }}" method="POST">
                 @csrf
                 <h1>Login Applicant Form</h1>
                 <div class="field-container">
-                    <label class="form-label">Email address</label>
+                    <label for="email" class="form-label">Email address</label>
                     <input type="email" name="email" class="form-control"
                         value="{{ !empty(old('email')) ? old('email') : null }}" placeholder="Enter Email Address"
                         required>
                 </div>
                 <div class="field-container">
-                    <label class="form-label">Password</label>
+                    <label for="password" class="form-label">Password</label>
                     <input type="password" name="password" class="form-control" placeholder="Enter Password" required>
                 </div>
-                <div class="form-bottom">
+                <div class="form-link">
                     <a href="{{ route('register.applicant') }}">Don't have account? Register here</a>
                 </div>
-                <div class="applicant-button">
+                <div class="authentication-button-container">
                     <a href="{{ route('home') }}" class="btn-danger">Back</a>
                     <button type="submit" class="btn-success">Login</button>
                 </div>
             </form>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">

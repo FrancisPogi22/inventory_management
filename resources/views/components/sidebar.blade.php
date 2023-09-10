@@ -1,8 +1,8 @@
-<div class="sidebar">
-    <div class="sidebar-header">
+<aside class="sidebar">
+    <header class="sidebar-header">
 
-    </div>
-    <div class="sidebar-content-container">
+    </header>
+    <div class="sidebar-container">
         <div class="sidebar-content">
             <div class="nav-item">
                 <a href="">
@@ -30,4 +30,4 @@
             </div>
         </div>
     </div>
-</div>
+</aside>
